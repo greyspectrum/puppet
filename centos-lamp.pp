@@ -3,7 +3,7 @@ exec { 'yum update':
   command => '/usr/bin/yum update'
 }
 
-# install httpd  package
+# install httpd package
 package { 'httpd':
   require => Exec['yum update'],
   ensure => installed,
